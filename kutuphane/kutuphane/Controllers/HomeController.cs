@@ -28,7 +28,7 @@ namespace kutuphane.Controllers
 
 
 
-        // fatihy branchında deneme 13.29
+        // fatihy branchında deneme 13.29    
 
 
         //public IActionResult Operations()
