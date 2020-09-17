@@ -27,15 +27,9 @@ namespace kutuphane.Controllers
         }
 
 
-        // master da yapılan değişiklik açıklama satırı 
-     
-        // master için değişiklik
-
-
-
-        // burası da fatih branchında yaptığım değişiklik 
+        // master branchı için değişiklik 13:30  
        
-
+         
 
 
         //public IActionResult Operations()
