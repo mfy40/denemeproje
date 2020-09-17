@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PSXDxmI27T13Wk1bo2unqXHQKrezHTTFxLRYbyLEjdSns8wydO8efNIW2/9bc07jd1bqm4QVt9cmCCqAUueV8A==",
+  "dgSpecHash": "eWLM4nMwZ0oXPOn4npZC2iSt8m9/FFpgbgF0VkfoPpRIRKmghj3HAaKOlC9LwrnSwgbfCuej2VCzugmBHZebrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\kutuphane.csproj",
+  "projectFilePath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\kutuphane.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fatih\\.nuget\\packages\\bootstrap\\4.5.2\\bootstrap.4.5.2.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",

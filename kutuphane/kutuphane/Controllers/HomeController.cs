@@ -27,6 +27,17 @@ namespace kutuphane.Controllers
         }
 
 
+        // master da yapılan değişiklik açıklama satırı 
+     
+
+
+
+
+        // burası da fatih branchında yaptığım değişiklik 
+       
+
+
+
         //public IActionResult Operations()
         //{
         //    return View();
@@ -37,7 +48,7 @@ namespace kutuphane.Controllers
         //    return View();
         //}
 
-   
+
         //public IActionResult StudentOperation()
         //{
         //    return View();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\kutuphane.csproj": {}
+    "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\kutuphane.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj": {
+    "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
+        "projectUniqueName": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
         "projectName": "kutuphane.database",
-        "projectPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
+        "projectPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
         "packagesPath": "C:\\Users\\Fatih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\obj\\",
+        "outputPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\kutuphane.csproj": {
+    "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\kutuphane.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\kutuphane.csproj",
+        "projectUniqueName": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\kutuphane.csproj",
         "projectName": "kutuphane",
-        "projectPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\kutuphane.csproj",
+        "projectPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\kutuphane.csproj",
         "packagesPath": "C:\\Users\\Fatih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane\\obj\\",
+        "outputPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -117,8 +117,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj": {
-                "projectPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj"
+              "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj": {
+                "projectPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj"
               }
             }
           }

@@ -5730,11 +5730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
+      "projectUniqueName": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
       "projectName": "kutuphane.database",
-      "projectPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
+      "projectPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
       "packagesPath": "C:\\Users\\Fatih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\obj\\",
+      "outputPath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x1VfjwoaMz11bAOhOt7Gr2X5zfX+obU7+3EGQIV4VicOT6qBE1jruTzaXFE238+Htuj6acV4vtBcl18Stjq1jw==",
+  "dgSpecHash": "gaidyrfpjNXcDvkx07MLA9j9Sebhl7pHgFnjc6Yh1w2iRXYbt3ML4OR440ghnwlN4W8sQMI5MLdp/LpcGaqQpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fatih\\source\\repos\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
+  "projectFilePath": "C:\\Users\\Fatih\\denemeproje\\kutuphane\\kutuphane.database\\kutuphane.database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fatih\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
