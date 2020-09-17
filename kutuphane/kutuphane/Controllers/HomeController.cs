@@ -28,7 +28,7 @@ namespace kutuphane.Controllers
 
 
 
-        // deneme belge düzenleme
+        // deneme belge düzenleme   13:22
 
 
         //public IActionResult Operations()
