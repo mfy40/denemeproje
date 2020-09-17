@@ -29,7 +29,6 @@ namespace kutuphane.Controllers
 
         // master branchı için değişiklik 13:30  
        
-         
             
 
         //public IActionResult Operations()
