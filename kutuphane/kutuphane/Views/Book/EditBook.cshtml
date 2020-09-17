@@ -1,0 +1,212 @@
+﻿@model kutuphane.ViewModels.Book
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ekle</title>
+
+
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Book" asp-action="Index">Kitap Düzenle</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    @Html.ValidationSummary(true)
+
+<form class="needs-validation" method="post" action="EditBook" , role="form" novalidate>
+
+
+
+    <div hidden="hidden" class="col-md-4 mb-3">
+      
+            @Html.TextBoxFor(m => m.Id, new { @id = "validationCustom01", @class = "form-control" })
+           
+    </div>
+
+
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.Name, new { @id = "validationCustom01", @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip">
+                Kitap ismi giriniz !
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.SerialNo, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.SerialNo, new { @class = "form-control" })
+            <div class="invalid-tooltip"><span>@Html.ValidationMessageFor(m => m.SerialNo)</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.ShelfNo, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.ShelfNo, new { @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip"><span>Raf numarası giriniz !</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.Kod, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.Kod, new { @class = "form-control" })
+            <div class="invalid-tooltip"><span>@Html.ValidationMessageFor(m => m.Kod)</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.DatePrinting, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.DatePrinting, @"{0:dd.MM.yyyy}",  new { @type = "date", @class = "form-control" })
+            <div class="invalid-tooltip"><span>@Html.ValidationMessageFor(m => m.DatePrinting)</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.DatePublish, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.DatePublish, @"{0:dd.MM.yyyy}", new { @type = "date", @class = "form-control" })
+            <div class="invalid-tooltip"><span>@Html.ValidationMessageFor(m => m.DatePublish)</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.EditionNo, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.EditionNo, new { @type = "number", @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip"><span>Baskı numarası giriniz !</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.CategoriesIds, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.ListBoxFor(m => m.CategoriesIds, (List<SelectListItem>)ViewBag.categories, new { multiple = "multiple", @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip"><span>Kategori seciniz !</span></div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.WriterIds, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.ListBoxFor(m => m.WriterIds, (List<SelectListItem>)ViewBag.writers, new { Multiple = "multiple" })
+
+            <div class="invalid-tooltip"><span>Yazar seciniz !</span></div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.BookshelfId, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.DropDownListFor(m => m.BookshelfId, (List<SelectListItem>)ViewBag.shelfs, "Seçiniz", new { @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip"><span>Kitaplık seciniz !</span></div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.PublisherId, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.DropDownListFor(m => m.PublisherId, (List<SelectListItem>)ViewBag.Publishers, "Seçiniz", new { @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip"><span>Yayın Evi seciniz !</span></div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4 mb-3">
+        @Html.LabelFor(m => m.StockNumber, new { @class = "control-label" })
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+            </div>
+            @Html.TextBoxFor(m => m.StockNumber, new { @type = "number", @class = "form-control", @required = "required" })
+            <div class="invalid-tooltip">
+                Kitap adeti giriniz !
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Kaydet</button>
+
+</form>
+
+
+</body>
+
+</html>
+
+
+<script>
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

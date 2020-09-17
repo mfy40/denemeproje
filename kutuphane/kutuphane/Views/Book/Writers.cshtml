@@ -1,0 +1,106 @@
+﻿@model List<kutuphane.ViewModels.Writer>
+
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Book" asp-action="Index">Yazarlar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Index">Kitaplar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Bookshelfs">Kitaplıklar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="BookCategorys">Kitap Kategorileri</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div><button onclick="location.href='@Url.Action("EditWriter","Book")'" class="btn btn-danger">Yazar ekle</button></div>
+
+    <br />
+
+    <div>
+
+        <table class="table table-bordered">
+            <tr>
+                <td>Id</td>
+                <td>İsim</td>
+               
+                <td>Düzenle</td>
+                <td>Sil</td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+           
+
+            <td>
+                <button onclick="location.href='@Url.Action("EditWriter","Book",new { id=item.Id })'" class="btn btn-dark">Düzenle</button>
+            </td>
+
+            <td>
+                <button onclick="javascript:remove(@item.Id)" class="btn btn-danger">Sil</button>
+            </td>
+
+
+        </tr>
+            }
+
+        </table>
+
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+
+    function remove(id) {
+
+        var alert = confirm("Kayıtı silmek istediğinizden eminmisiniz !");
+
+
+        if (alert == true) {
+
+            location.href = '/Book/DeleteWriter?id=' + id;
+        }
+
+    }
+
+
+</script>
+

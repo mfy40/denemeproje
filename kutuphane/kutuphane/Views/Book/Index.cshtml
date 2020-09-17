@@ -1,0 +1,123 @@
+﻿@model List<kutuphane.ViewModels.Book>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kitap İşlemleri</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kitaplar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Bookshelfs">Kitaplıklar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="BookCategorys">Kitap Kategorileri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="writers">Yazarlar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div><button onclick="location.href='@Url.Action("EditBook","Book")'" class="btn btn-danger">Kitap ekle</button></div>
+
+    <br />
+
+    <div>
+
+        <table class="table table-bordered">
+
+
+            <tr>
+
+                <td>Id</td>
+                <td>Kitap İsmi</td>
+                <td>Kitap Yazarı</td>
+                <td>Serial No</td>
+                <td>Basım Tarihi</td>
+                <td>Kitap Adeti</td>
+                <td>Kitap Adresi</td>
+                <td>Düzenle</td>
+                <td>Sil</td>
+
+
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>
+
+               
+
+                @String.Join(" , ", item.Writers.Select(m => m.Name).ToList())
+
+
+            </td>
+            <td>@item.SerialNo</td>
+            <td>@item.DatePrinting</td>
+            <td>@item.StockNumber</td>
+            <td>@item.ShelfNo</td>
+            <td>
+                <button onclick="location.href='@Url.Action("EditBook","Book",new { id=item.Id })'"  class="btn btn-dark">Düzenle</button>
+            </td>
+
+            <td>
+                <button onclick="javascript:remove(@item.Id)" class="btn btn-danger">Sil</button>
+            </td>
+
+
+           
+        </tr>
+            }
+
+
+        </table>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+
+
+    function remove(id) {
+
+        var alert = confirm("Kayıtı silmek istediğinizden eminmisiniz !");
+
+      
+        if (alert == true) {
+
+            location.href = '/Book/DeleteBook?id='+id;
+        }
+
+    }
+
+
+</script>
