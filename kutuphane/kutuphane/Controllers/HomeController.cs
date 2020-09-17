@@ -26,12 +26,7 @@ namespace kutuphane.Controllers
             return View();
         }
 
-
-        // master branchı için değişiklik 13:30  
-       
-            
-
-
+ 
 
         //public IActionResult Operations()
         //{
