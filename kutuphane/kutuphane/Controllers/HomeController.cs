@@ -28,6 +28,8 @@ namespace kutuphane.Controllers
 
 
 
+        // deneme belge düzenleme
+
 
         //public IActionResult Operations()
         //{
